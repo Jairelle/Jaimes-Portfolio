@@ -6,11 +6,11 @@ body {
 }
 
 .about-section {
-    padding: 80px 10% 40px;
+    padding: 120px 10% 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
+    min-height: 80vh;
 }
 
 .about-container {

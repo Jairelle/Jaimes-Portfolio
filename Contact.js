@@ -27,7 +27,7 @@ window.onload = function() {
                     // Success state
                     btn.innerHTML = originalText;
                     btn.style.opacity = '1';
-                    alert('Thank you! Your message has been sent to jaimesoreto@gmail.com');
+                    alert('Thank you! Your message has been sent successfully.');
                     contactForm.reset(); //
                 }, (err) => {
                     // Error state

@@ -67,7 +67,7 @@ header{
 
 /*Home Section*/
 section{
-    padding: 0 10%;
+    padding: 100px 10% 50px;
 }
 .container{
     width: 100%;
@@ -76,7 +76,7 @@ section{
     background-size: cover;
     background-position: center;
     position: relative;
-    display: grid;
+    display: flex;
     align-items: center;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -117,15 +117,23 @@ section{
 .button1{
     display: flex;
     justify-content: center;
-    color: white;
+    margin:  15px;
+    background: #5500ff;
+    padding: 7px 20px;
+    border-radius: 8px;
+    color: #202020;
     font-size: 18px;
     font-weight: 600;
-    margin-right: 30px;
     transition: 0.3s;
+}
+.button1 span{
+    color: #202020;
+}
+.button1:hover{
+    transform: translateY(-3px);
 }
 .button1:hover{
     color: rgb(219, 58, 173);
-    text-decoration: underline #B09F9F;
     transform: translateY(-5px);
 }
 .button2{
@@ -144,6 +152,7 @@ section{
 }
 .button2:hover{
     transform: translateY(-3px);
+    color: rgb(219, 58, 173);
 }
 .social-icon{
     position: absolute;
