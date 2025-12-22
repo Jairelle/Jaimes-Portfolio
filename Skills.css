@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Targeted styling for the 'My Skills' heading */
+.skills h2, .skills-header h2 {
+    font-family: 'Poppins', sans-serif; /* Applying the new font */
+    font-size: 60px;                   /* Making it bold and prominent */
+    font-weight: 700;
+    color: white;                      /* Matching your dark theme */
+    text-align: center;                /* Centering it above the logos */
+    margin-bottom: 50px;               /* Adding space between text and logos */
+    letter-spacing: 2px;               /* Giving it a modern, airy feel */
+}
+
+/* Optional: Adding the blue accent color to match your reference */
+.skills h2 span {
+    color: #b706c4; 
+}
+
+/* Skills Section Styling */
+.skills {
+    background-color: #1f242d; /* Matches your Analysis background */
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.skills-header h5 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.skills-header h5 span {
+    color: rgb(185, 14, 219); /* Your signature Purple */
+}
+
+.skills-header h2 {
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Container for the boxes */
+.skills-container {
+    display: flex;            /* Enables flexbox */
+    justify-content: center;   /* Centers cards horizontally */
+    align-items: center;       /* Aligns cards vertically if they have different heights */
+    flex-wrap: wrap;           /* Allows cards to move to the next line on mobile */
+    gap: 30px;                 /* Adjusts the space between each logo box */
+    padding: 50px 10%;         /* Adds breathing room on the sides */
+    max-width: 1200px;         /* Prevents the row from getting too wide on huge screens */
+    margin: 0 auto;            /* Centers the entire container on the page */
+}
+
+.skill-box {
+    /* Keep your existing dimensions */
+    width: 200px; 
+    height: 150px;
+    display: flex;            /* Centers the icon inside the box */
+    justify-content: center;
+    align-items: center;
+    background: #2b303b;      /* Matches your dark theme */
+    border-radius: 15px;
+}
+.skill-box img {
+    max-width: 80%;    /* Ensures image isn't wider than the box */
+    max-height: 60%;   /* Ensures image isn't taller than the box */
+    object-fit: contain; /* Maintains aspect ratio without stretching */
+}
+
+.skill-box span {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Hover Effect: Purple Glow & Float */
+.skill-box:hover {
+    transform: translateY(-10px);
+    border-color: rgb(185, 14, 219);
+    box-shadow: 0 0 25px rgb(185, 14, 219);
+}
+
+/* Mobile Tweak */
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on small phones */
+    }
+}
+
+
+/* Certificates Section */
+.certificates-section {
+    background-color: #1f242d; /* Matches your Analysis section background */
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.cert-header h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.cert-header span {
+    color: #b90edb; /* Your purple theme color */
+}
+
+/* THE GRID SYSTEM */
+.cert-grid {
+    display: grid;
+    /* This creates 3 columns that shrink/grow and wrap to new lines automatically */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* THE CARD STYLING */
+.cert-card {
+    background: #2b303b;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cert-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* HOVER EFFECT */
+.cert-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #b90edb;
+    box-shadow: 0 0 25px rgba(185, 14, 219, 0.4);
+}
+
+/* TechStack Section */
+.tech-box {
+    width: 200px; 
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b303b;
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* Added for smooth hover */
+}
+
+.tech-box img {
+    max-width: 80%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+.tech-box span {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.tech-box:hover {
+    transform: translateY(-10px);
+    border-color: rgb(185, 14, 219);
+    box-shadow: 0 0 25px rgb(185, 14, 219);
+}
+.tech-container {
+    display: flex;            /* Aligns items in a row */
+    flex-wrap: wrap;          /* Allows icons to wrap to a 2nd row if needed */
+    justify-content: center;   /* Centers the boxes horizontally */
+    gap: 25px;                /* Adds the spacing between the boxes */
+    padding: 40px 20px;
+    max-width: 1000px;        /* Keeps the grid from getting too wide */
+    margin: 0 auto;           /* Centers the container on the page */
+}
+
+#cert-header {
+    scroll-margin-top: 100px; 
+}
+html {
+    scroll-behavior: smooth;
+}

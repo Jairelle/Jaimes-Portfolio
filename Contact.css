@@ -1,0 +1,69 @@
+.contact {
+    background-color: #1f242d;
+    padding: 100px 7%;
+    color: white;
+    text-align: center;
+}
+
+.contact-header span { 
+    color: rgb(223, 32, 207); 
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.contact-header{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0 2rem 0;
+}
+
+#contact-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.input-row input, #contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background: #323946;
+    border-radius: 0.8rem;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+/* The Blue Glow Effect */
+.input-row input:focus, #contact-form textarea:focus {
+    border-color: rgb(230, 0, 255);
+    box-shadow: 0 0 15px rgb(230, 0, 255);
+    outline: none;
+}
+
+.send-btn {
+    padding: 1rem 3rem;
+    background: #ff00e6; 
+    color: #1f242d;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff00e6;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.send-btn:hover {
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .input-row { flex-direction: column; }
+}

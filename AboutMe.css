@@ -1,0 +1,355 @@
+/* General Setup */
+body {
+    background-color: #1f242d; /* Dark background from image */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.about-section {
+    padding: 80px 10% 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.about-img img {
+  width: 400px;
+  height: auto;
+  border: 3px solid rgb(182, 24, 194);
+  border-radius: 20px; /* Soft rounded corners */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 0 20px rgba(182, 24, 194, 0.6); /* Glowing border */
+}
+.about-img img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Styling */
+.about-content {
+    max-width: 600px;
+}
+
+.intro-title {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.intro-title span {
+    color: #0ef; /* Accent color */
+}
+
+.about-content p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    background: rgb(133, 12, 160);
+    color: #1f242d;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px rgb(244, 37, 223);
+}
+
+/* Stats Layout: 3 Columns */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 9% 80px;
+    margin-top: 25px;
+}
+
+.stat-card {
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners for the boxes */
+    border: 1px solid #ddd; /* Generic border to see the boxes */
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Button Group Layout */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 768px) {
+    .hero, .stats-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* For the footer  */
+.footer {
+    display: flex;
+    justify-content: space-between; /* This pushes text to left and arrow to right */
+    align-items: center; /* This keeps them perfectly level vertically */
+    padding: 2rem 9%;
+    background: #1f242d; /* Matches your body background */
+    width: 100%;
+}
+
+/* Styling for the purple button box */
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #9c27b0; /* Purple color from your image */
+    border-radius: 12px;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.footer-iconTop a i {
+    font-size: 2rem;
+    color: white;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem #9c27b0; /* Optional glow effect */
+}
+
+/* Hover Overlay for Project Cards */
+/* Ensure the card container is ready for the overlay */
+.stat-card {
+    position: relative; /* Keeps the purple overlay inside the box */
+    width: 100%;
+    min-height: 200px;
+    background: #23272f;
+    border-radius: 20px;
+    overflow: hidden; /* This crops the purple gradient to the rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* The content you see normally */
+.stat-main-content {
+    padding: 30px;
+    transition: opacity 0.4s ease;
+}
+
+/* Hide the main text when we hover */
+.stat-card:hover .stat-main-content {
+    opacity: 0;
+}
+
+/* The Purple Hover Layer */
+.stat-card .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient: Matches the purple look in your image */
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(185, 14, 219, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    
+    /* Logic to hide/show */
+    opacity: 0; 
+    transform: translateY(20px); /* Start slightly lower */
+    transition: all 0.4s ease;
+}
+
+/* Show the overlay on hover */
+.stat-card:hover .project-overlay {
+    opacity: 1;
+    transform: translateY(0); /* Slide up into place */
+}
+
+/* The "View Repository" Button Style */
+.repo-btn {
+    margin-top: 15px;
+    color: #b90edb;
+    background: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.repo-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
+/*uptime*/
+/* Update your grid to force 3 equal columns */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces all 3 to be exactly the same width */
+    gap: 20px;
+    padding: 20px 9%;
+    align-items: stretch; /* Forces all cards to have the same height */
+}
+
+/* Ensure the card has a fixed or consistent height */
+.stat-card {
+    background: #23272f;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 200px; /* Adjust this value to your preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#uptime-display {
+    font-size: 1rem; /* Slightly smaller to fit long time strings */
+    color: #0ef;
+    margin-top: 10px;
+    white-space: nowrap; /* Prevents wrapping */
+    line-height: 1.4;
+}
+
+#uptime-display {
+    font-size: 1.1rem; /* Slightly larger for visibility */
+    font-weight: 500;
+    color: #0ef; /* Using your accent color for the timer */
+    margin-top: 10px;
+}
+
+
+
+/*Academics Section*/
+/* Container Spacing */
+.academics-section {
+    padding: 60px 9%;
+    text-align: center;
+}
+
+.academics-header {
+    margin-bottom: 50px;
+}
+
+.academics-header .sub-heading {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.academics-header .sub-heading span {
+    color: rgb(224, 49, 237); /* Your cyan accent */
+}
+
+.academics-header .heading {
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+/* The Grid Layout */
+.academics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Individual Academic Cards */
+.academic-card {
+    background: #23272f; /* Dark card background */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: 0.4s ease;
+    min-width: 0;
+    padding: 20px;
+}
+
+.academic-card:hover {
+    border-color: #ff34cc; /* Blue highlight on hover */
+    transform: translateY(-5px);
+}
+
+/* Icon and Typography styling */
+.academic-card .icon {
+    font-size: 4rem;
+    color: #ca38f2; /* The blue color from your image */
+    margin-bottom: 15px;
+}
+
+.academic-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.academic-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.academic-card ul li {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.academic-card ul li strong {
+    color: #fff;
+}
+
+/* For tablets: 2 columns */
+@media (max-width: 1100px) {
+    .academics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For mobile phones: 1 column */
+@media (max-width: 600px) {
+    .academics-grid {
+        grid-template-columns: 1fr;
+    }
+}
