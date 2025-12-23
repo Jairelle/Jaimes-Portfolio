@@ -103,6 +103,8 @@ section{
     margin-bottom: 30px;
     max-width: 710px;
     line-height: 30px;
+    text-align: justify;
+    text-indent: 50px;
 }
 .button{
     display: flex;
@@ -180,7 +182,7 @@ section{
         transition: 0.3s;
     }
     section{
-        padding: 0 3%;
+        padding: 100px 3% 50px;
         transition: 0.3s;
     }
 }
@@ -282,7 +284,7 @@ section{
 .analysis-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
     flex-wrap: wrap; /* Makes it stack on mobile */
 }
@@ -294,9 +296,11 @@ section{
     border-radius: 20px;
     width: 350px;
     border: 1px solid transparent; /* Prepare for hover border */
+    min-height: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     transition: transform 0.4s ease;
 }
 
@@ -321,6 +325,7 @@ section{
     font-size: 15px;
     color: #ccc; /* Dimmed text for descriptions */
     line-height: 1.6;
+    text-align: center;
 }
 
 /*Footer Section*/

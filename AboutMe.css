@@ -52,7 +52,7 @@ body {
 }
 
 .intro-title span {
-    color: #0ef; /* Accent color */
+    color: rgb(188, 21, 130); /* Accent color */
 }
 
 .about-content p {
@@ -60,6 +60,8 @@ body {
     font-size: 1rem;
     color: #ccc;
     margin-bottom: 2rem;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 /* Button Styling */
