@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Loading.css">
     <title>Jaimes Portfolio</title>
-    <link rel="icon" type="Images/image/png" href="Images/JaimesPic.png"/> 
-<!-- Google Fonts -->
+    <link rel="icon" type="Images/image/png" href="Images/JaimesPic.png" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- Boxicons -->
-<link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
+
 <body>
+
+    <!--Loading Animation-->
+    <div class="loading">
+	<div class="loading-text">
+		<span class="loading-text-words">J</span>
+		<span class="loading-text-words">A</span>
+		<span class="loading-text-words">I</span>
+		<span class="loading-text-words">M</span>
+		<span class="loading-text-words">E</span>
+		<span class="loading-text-words">S</span>
+        <span class="loading-text-words"> </span>
+		<span class="loading-text-words">O</span>
+        <span class="loading-text-words">R</span>
+        <span class="loading-text-words">E</span>
+        <span class="loading-text-words">T</span>
+        <span class="loading-text-words">O</span>
+	</div>
+</div>
 
     <header>
         <a href="#" class="logo">Jaimes Jairelle Oreto</a>
@@ -34,17 +55,23 @@
     <section class="container">
         <div class="cont-text">
             <h1><span>Jaimes Jairelle Oreto</span><br>Computer Science Student & <br> Aspiring Developer</h1>
-            <p>Welcome to my portfolio. I am Jaimes Jairelle Oreto, a dedicated Computer Science student and an aspiring Developer. Here, you’ll find my projects and learn more about my academic and professional interests.</p>
+            <p>Welcome to my portfolio. I am Jaimes Jairelle Oreto, a dedicated Computer Science student and an aspiring
+                Developer. Here, you’ll find my projects and learn more about my academic and professional interests.
+            </p>
 
             <div class="button">
-                <a href="AboutMe.html" class="button1"><span><i class='bx bx-right-arrow-circle'></i></span>Wanna Know More?</a>
-                <a href="Images/Jaimes Oreto.pdf" class="button2"><span><i class='bx bx-down-arrow-circle'></i></span>Download Resume</a>
+                <a href="AboutMe.html" class="button1"><span><i class='bx bx-right-arrow-circle'></i></span>Wanna Know
+                    More?</a>
+                <a href="Images/Jaimes Oreto.pdf" class="button2"><span><i
+                            class='bx bx-down-arrow-circle'></i></span>Download Resume</a>
             </div>
         </div>
 
         <div class="social-icon">
-            <a href="https://www.facebook.com/jaimesjairelle.oreto.16" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://www.instagram.com/jaimesoreto31/" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/jaimesjairelle.oreto.16" aria-label="Facebook"><i
+                    class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/jaimesoreto31/" aria-label="Instagram"><i
+                    class='bx bxl-instagram'></i></a>
             <a href="https://www.tiktok.com/@jairelleeeeeee" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>
             <a href="https://github.com/Jairelle" aria-label="GitHub"><i class='bx bxl-github'></i></a>
         </div>
@@ -60,24 +87,25 @@
         </div>
 
         <div class="analysis-container">
-            
-            <div class="analysis-card">
-                <i class='bx bx-calendar-check'></i> <h3>December 21, 2025</h3>
-                <p>The date this portfolio was deployed.</p>
-        </div>
 
-        <div class="analysis-card">
-            <i class='bx bx-time-five'></i>
-            <h3>Page Uptime</h3>
-            <p id="uptime-counter"></p>
-        </div>
-</section>
+            <div class="analysis-card">
+                <i class='bx bx-calendar-check'></i>
+                <h3>December 21, 2025</h3>
+                <p>The date this portfolio was deployed.</p>
+            </div>
+
+            <div class="analysis-card">
+                <i class='bx bx-time-five'></i>
+                <h3>Page Uptime</h3>
+                <p id="uptime-counter"></p>
+            </div>
+    </section>
 
 
 </body>
 
 <!-- Footer Section -->
- <footer class="footer">
+<footer class="footer">
     <div class="footer-text">
         <p>Copyright &copy; 2025 by Jaimes Jairelle Oreto | All Rights Reserved.</p>
     </div>
@@ -87,5 +115,6 @@
     </div>
 </footer>
 <script src="script.js"></script>
-</html>
+<script src="Loading.js"></script>
 
+</html>
